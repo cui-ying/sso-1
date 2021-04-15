@@ -21,7 +21,7 @@
 @goto:eof
 
 :help
-    @echo "Usage: build.bat [help|sso-server|sso-management|sso-config|cas-client-demo|shiro-client-demo|run-all|hosts]"
+    @echo "Usage: build.cmd [help|sso-server|sso-management|sso-config|cas-client-demo|shiro-client-demo|run-all|hosts]"
 
     @echo 1. sso-config: Config Server
     @echo 2. sso-server: CAS Server

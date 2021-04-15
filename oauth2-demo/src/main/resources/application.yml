@@ -1,0 +1,35 @@
+#debug: false
+server:
+  port: 8843
+  ssl:
+    keyStore: file:/etc/cas/thekeystore
+    keyStorePassword: changeit
+    keyPassword: changeit
+
+management:
+  security:
+    role: HERO
+
+logging:
+  level:
+    org.springframework: INFO
+    com.netflix.discovery: 'OFF'
+
+sso-prefix: https://sso.baicaowei.cn:8443/cas/oauth2.0
+security:
+  user:
+    password: user
+  ignored: /,/favicon.ico,/index.html,/home.html,/dashboard.html,/js/**,/css/**,/webjars/**
+  sessions: ALWAYS
+  oauth2:
+    sso:
+      loginPath: /dashboard/login
+    client:
+      clientId: oauth_client_demo
+      clientSecret: oauth_client_demo_secret
+      accessTokenUri: ${sso-prefix}/accessToken
+      userAuthorizationUri: ${sso-prefix}/authorize
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: ${sso-prefix}/profile
+      preferTokenInfo: false

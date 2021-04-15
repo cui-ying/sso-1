@@ -30,8 +30,8 @@ set DNAME="CN = cas.example.org OU = Example OU = Org  C = US"
 @goto:eof
 
 :help
-    @echo "Usage: build.bat [copy|clean|package|run|debug|gencert] [optional extra args for maven]"
-    @echo "To get started on a clean system, run "build.bat copy" and "build.bat gencert", then "build.bat run"
+    @echo "Usage: build.cmd [copy|clean|package|run|debug|gencert] [optional extra args for maven]"
+    @echo "To get started on a clean system, run "build.cmd copy" and "build.cmd gencert", then "build.cmd run"
     @echo "Note that using the copy or gencert arguments will create and/or overwrite the %CAS_DIR% which is outside this project"
 @goto:eof
 

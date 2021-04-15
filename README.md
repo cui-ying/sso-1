@@ -74,14 +74,15 @@ docker run -d --restart=always  -p 8443:8443 kawhii/sso
 
 
 | 模块名 |模块介绍|端口情况|必须https|path|启动循序
-|:-------|:-------|:----|:-------|:-----|:--|
-|sso-server|cas服务|8443|√|cas|2|
-|sso-config|配置中心|8888|×|config|1|
+|:-------|:-------|:----|:-------|:-----|:---|
+|sso-monitor|监控服务|8444|×|/|1|
+|sso-config|配置中心|8888|×|config|2|
+|sso-server|cas服务|8443|√|cas|3|
 |sso-management|service管理|8081|×|cas-management|3|
 |sso-cas-client-demo|cas-client-demo|8080|×|/sample|4|
 |sso-client-shiro-demo|shiro-client-demo|8083|×|/|5|
 |sso-client-proxy-demo|OAuth2代理转发客户端|8808|×|/|6|
-|sso-monitor|监控服务|8444|×|/|7|
+
 
 ## 代码下载 [![码云](https://img.shields.io/badge/download-码云-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/kawhii/sso)
 
@@ -99,7 +100,7 @@ build.cmd help
 ```
 输出以下帮助信息
 ```cmd
-"Usage: build.bat [help|sso-server|sso-management|sso-config|cas-client-demo|shiro-client-demo|run-all|hosts]"
+"Usage: build.cmd [help|sso-server|sso-management|sso-config|cas-client-demo|shiro-client-demo|run-all|hosts]"
 1. sso-config: Config Server
 2. sso-server: CAS Server
 3. sso-management: Cas Management
